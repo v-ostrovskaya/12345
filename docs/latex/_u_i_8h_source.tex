@@ -1,0 +1,65 @@
+\doxysection{UI.\+h}
+\label{_u_i_8h_source}\index{cpp\_proj/UI.h@{cpp\_proj/UI.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Scene.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ maxObjectCount\ 32}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }UI\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{struct\ }ListedObject\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected;\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ name;\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ Shape::Shapes\ shape;\ }
+\DoxyCodeLine{00028\ \ \ \ \ ListedObject()\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ isSelected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ -\/1;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}null"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ shape\ =\ Shape::Shapes::cube;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00043\ \ \ \ \ ListedObject(\textcolor{keywordtype}{bool}\ isSelected,\ \textcolor{keywordtype}{int}\ ID,\ std::string\ name,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Shape::Shapes\ shape)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ this-\/>isSelected\ =\ isSelected;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ ID;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ this-\/>shape\ =\ shape;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ Scene\ *scene;\ }
+\DoxyCodeLine{00054\ \ \ ListedObject}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ items[maxObjectCount];\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{int}\ currentCount\ =\ 0;\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{int}\ cubeCount\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ coneCount\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{int}\ cylinderCount\ =\ 0;\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{int}\ sphereCount\ =\ 0;\ \ \ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{float}\ positionBuffer[3]\ =\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ 0,\ 0,\ 0\};\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{float}\ rotationBuffer[3]\ =\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ 0,\ 0,\ 0\};\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{float}\ scaleBuffer[3]\ =\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ 0,\ 0,\ 0\};\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{int}\ objectListMenuHeight\ =}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ maxObjectCount;\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ AddItem(ListedObject\ \&}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item);\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ ReInitItems();\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ DeleteItems();\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ UI(Scene\ *scene);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{void}\ DrawObjectMenu();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{void}\ DrawObjectList();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{void}\ DrawTransformMenu();}
+\DoxyCodeLine{00101\ \};}
+
+\end{DoxyCode}

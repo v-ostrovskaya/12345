@@ -1,0 +1,17 @@
+\chapter{Basic 3D Editor}
+\label{index}\index{Basic 3D Editor@{Basic 3D Editor}}
+\doxysection{Authors}\label{index_authors_sec}
+Marat Zarudnev, Mikhail Ustyantsev, Viktoria Ostrovskaya\doxysection{Description}\label{index_desc_sec}
+Our application will be used to build simple 3D environments. The user can create basic 3D shapes like cubes, spheres, and cylinders and then manipulate them by moving, rotating, and scaling to build different structures.\doxysection{User Interface}\label{index_ui_sec}
+
+\begin{DoxyItemize}
+\item \doxyref{Scene}{p.}{class_scene}\+: This window is for visual information only. Here, the objects and changes applied to them are displayed in real time. The camera will be immovable and stay at a fixed angle. To prevent objects from getting out of view, there will be an invisible border. Later, we may remove the border and add panning and orbiting functionality to the camera.
+\item Primitive menu\+: This section is used to create new objects. Select one from the list and it will appear at the origin. It will also be displayed at the collection.
+\item Collection\+: The list of all created objects. Here, it is possible to select an object and delete it. The selected object will light up at the scene. Later, we may add basic list functionality\+: renaming, duplicating, selecting multiple items and so on.
+\item Operations\+: In this menu you can select and apply the operations (moving, rotating, scaling) and their axes. It is possible to use multiple at once. The arrow buttons are used to move the object forward and backward, rotate it clockwise and counterclockwise, scale it up and down, or all together.
+\end{DoxyItemize}\doxysection{APIs}\label{index_apis_sec}
+
+\begin{DoxyItemize}
+\item Im\+Gui\+: for \doxyref{UI}{p.}{class_u_i}
+\item Open\+GL\+: for 3D rendering 
+\end{DoxyItemize}

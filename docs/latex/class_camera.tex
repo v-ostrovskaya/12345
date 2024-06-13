@@ -1,0 +1,140 @@
+\doxysection{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+\doxyref{Scene}{p.}{class_scene}\textquotesingle{}s camera class.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Camera} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Camera}{p.}{class_camera} constructor. \end{DoxyCompactList}\item 
+glm\+::mat4 \textbf{ Get\+View\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Get the view matrix. \end{DoxyCompactList}\item 
+void \textbf{ Pan} (glm\+::vec3 offset)
+\begin{DoxyCompactList}\small\item\em Pan the camera. \end{DoxyCompactList}\item 
+void \textbf{ Orbit} (glm\+::vec3 angle)
+\begin{DoxyCompactList}\small\item\em Orbit the camera. \end{DoxyCompactList}\item 
+glm\+::vec3 \textbf{ Get\+Right} ()
+\begin{DoxyCompactList}\small\item\em Get the right vector. \end{DoxyCompactList}\item 
+glm\+::vec3 \textbf{ Get\+Up} ()
+\begin{DoxyCompactList}\small\item\em Get the up vector. \end{DoxyCompactList}\item 
+glm\+::vec3 \textbf{ Get\+Forward} ()
+\begin{DoxyCompactList}\small\item\em Get the forward vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Scene}{p.}{class_scene}\textquotesingle{}s camera class. 
+
+This class manages the camera\textquotesingle{}s position and orientation in the 3D scene. It provides functionalities to pan and orbit the camera. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{Camera()}
+{\footnotesize\ttfamily \label{class_camera_a01f94c3543f56ede7af49dc778f19331} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxyref{Camera}{p.}{class_camera} constructor. 
+
+Initializes the camera with default values. 
+
+\doxysubsection{Member Function Documentation}
+\index{Camera@{Camera}!GetForward@{GetForward}}
+\index{GetForward@{GetForward}!Camera@{Camera}}
+\doxysubsubsection{GetForward()}
+{\footnotesize\ttfamily \label{class_camera_a5b0e53f332e68d24fd291bf54f6b6e77} 
+glm\+::vec3 Camera\+::\+Get\+Forward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the forward vector. 
+
+\begin{DoxyReturn}{Returns}
+The forward direction vector of the camera. 
+\end{DoxyReturn}
+\index{Camera@{Camera}!GetRight@{GetRight}}
+\index{GetRight@{GetRight}!Camera@{Camera}}
+\doxysubsubsection{GetRight()}
+{\footnotesize\ttfamily \label{class_camera_a61fbb0f391974c5e026385ba1d3deac9} 
+glm\+::vec3 Camera\+::\+Get\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the right vector. 
+
+\begin{DoxyReturn}{Returns}
+The right direction vector of the camera. 
+\end{DoxyReturn}
+\index{Camera@{Camera}!GetUp@{GetUp}}
+\index{GetUp@{GetUp}!Camera@{Camera}}
+\doxysubsubsection{GetUp()}
+{\footnotesize\ttfamily \label{class_camera_aff61f06284cca3216accdf556dfbd3c1} 
+glm\+::vec3 Camera\+::\+Get\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the up vector. 
+
+\begin{DoxyReturn}{Returns}
+The up direction vector of the camera. 
+\end{DoxyReturn}
+\index{Camera@{Camera}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!Camera@{Camera}}
+\doxysubsubsection{GetViewMatrix()}
+{\footnotesize\ttfamily \label{class_camera_affa333055635aed96518c4c66be9a70c} 
+glm\+::mat4 Camera\+::\+Get\+View\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the view matrix. 
+
+\begin{DoxyReturn}{Returns}
+The current view matrix of the camera. 
+\end{DoxyReturn}
+\index{Camera@{Camera}!Orbit@{Orbit}}
+\index{Orbit@{Orbit}!Camera@{Camera}}
+\doxysubsubsection{Orbit()}
+{\footnotesize\ttfamily \label{class_camera_a18ebe20086ba9a4b384069794bd163f1} 
+void Camera\+::\+Orbit (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{angle}{}\end{DoxyParamCaption})}
+
+
+
+Orbit the camera. 
+
+Orbits the camera around its target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angles by which to orbit the camera around the target. \\
+\hline
+\end{DoxyParams}
+\index{Camera@{Camera}!Pan@{Pan}}
+\index{Pan@{Pan}!Camera@{Camera}}
+\doxysubsubsection{Pan()}
+{\footnotesize\ttfamily \label{class_camera_a1d8f0ef6c5182ce7f3d5b0471134eb7c} 
+void Camera\+::\+Pan (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Pan the camera. 
+
+Moves the camera along its XY plane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The vector by which to pan the camera. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+proj/\textbf{ Camera.\+h}\end{DoxyCompactItemize}

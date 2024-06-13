@@ -1,0 +1,161 @@
+\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+The parent 3D object abstract class.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shape_a274ee77c6a7bcab2f0d2666e128d2ad0} 
+enum \textbf{ Shapes} \{ {\bfseries cube}
+, {\bfseries cone}
+, {\bfseries cylinder}
+, {\bfseries sphere}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for different shape types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shape_af4fd3ffe1d6a42366ca8ba8461dc8ead} 
+int {\bfseries Get\+Index\+Count} ()
+\item 
+\label{class_shape_affc678d0f0079ec0e918396d77f54ed1} 
+glm\+::vec3 {\bfseries Get\+Position} ()
+\item 
+\label{class_shape_af2f4b64a6af107a2108e55c0595b46d0} 
+glm\+::vec3 {\bfseries Get\+Rotation} ()
+\item 
+\label{class_shape_a8f44569e6ffcd66eb446cb4270ce6429} 
+glm\+::vec3 {\bfseries Get\+Scale} ()
+\item 
+\label{class_shape_a375446ac262334490ef215ba5e418623} 
+int {\bfseries Get\+ID} ()
+\item 
+\label{class_shape_a3dee81ca30bf5fc7fd0e4b3575cbf40f} 
+void {\bfseries Translate} (glm\+::vec3 v)
+\item 
+\label{class_shape_a884828166cc420a621652c9fd7f8b112} 
+void {\bfseries Rotate} (glm\+::vec3 v)
+\item 
+\label{class_shape_aab61454203d9985b71958b05d745a486} 
+void {\bfseries Scale} (glm\+::vec3 v)
+\item 
+\label{class_shape_a2463f243c217a053f36478e83af0a994} 
+void {\bfseries Translate} (float $\ast$v)
+\item 
+\label{class_shape_a12c9c1118678b1a2dde7c22755a809e4} 
+void {\bfseries Rotate} (float $\ast$v)
+\item 
+\label{class_shape_a5f596d9c1b626d824d7c272d48932d38} 
+void {\bfseries Scale} (float $\ast$v)
+\item 
+\label{class_shape_a2c088792198e9875a4bec47ca50d0bcf} 
+glm\+::vec3 {\bfseries Get\+Color} ()
+\item 
+\label{class_shape_a48f9fc45b04f9742d463dcde860a2c97} 
+\textbf{ Shapes} {\bfseries Get\+Shape} ()
+\item 
+virtual \textbf{ VAO} \textbf{ Get\+VAO} ()=0
+\begin{DoxyCompactList}\small\item\em Return the shape\textquotesingle{}s corresponding \doxyref{VAO}{p.}{class_v_a_o} using \doxyref{Vertex\+Data}{p.}{class_vertex_data} methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static glm\+::mat4 \textbf{ Get\+Object\+Matrix} (\textbf{ Shape} $\ast$object)
+\begin{DoxyCompactList}\small\item\em The translation, rotation, and scaling transformations are done using matrices. We multiply each vertex in the \doxyref{VAO}{p.}{class_v_a_o} by a matrix to get the result. The matrix is constructed using the position, rotation, and scale fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shape_a9d40806043dc68976c2e29bc63d6a994} 
+bool {\bfseries is\+Selected} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shape_a98e4008c12e0c6a660afd78136fd69f5} 
+glm\+::vec3 {\bfseries position} = glm\+::vec3(0, 0, 0)
+\item 
+\label{class_shape_a81257f48becb5f044ccd08d08843d74b} 
+glm\+::vec3 {\bfseries rotation} = glm\+::vec3(0, 0, 0)
+\item 
+\label{class_shape_aa2539db31d71a3cef01dbca83335b9b4} 
+glm\+::vec3 {\bfseries scale} = glm\+::vec3(1, 1, 1)
+\item 
+\label{class_shape_a2582911f3d92d34afae0b736729576f7} 
+glm\+::vec3 {\bfseries normal\+Color} = glm\+::vec3(0.\+5f, 0.\+5f, 0.\+5f)
+\item 
+\label{class_shape_a6e7c28b1bac9e01d062e06c8c91ddd0f} 
+glm\+::vec3 {\bfseries selected\+Color} = glm\+::vec3(0.\+0f, 0.\+3f, 0.\+65f)
+\item 
+\label{class_shape_a41ed02597b39a932373ab72e9afe4d40} 
+int {\bfseries id}
+\item 
+\label{class_shape_a879c809be2f098c01d7689d5cef8db82} 
+int {\bfseries index\+Count} = 0
+\item 
+\label{class_shape_a2313c78ffc760858132195e96264aa1d} 
+\textbf{ Shapes} {\bfseries shape}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shape_af3040ba8caa5ef06f8cb43cc633369a1} 
+static int {\bfseries id\+Increment}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The parent 3D object abstract class. 
+
+\doxysubsection{Member Function Documentation}
+\index{Shape@{Shape}!GetObjectMatrix@{GetObjectMatrix}}
+\index{GetObjectMatrix@{GetObjectMatrix}!Shape@{Shape}}
+\doxysubsubsection{GetObjectMatrix()}
+{\footnotesize\ttfamily \label{class_shape_a8dc5e76f3f5331b295978d891469ad59} 
+static glm\+::mat4 Shape\+::\+Get\+Object\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ Shape} $\ast$}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The translation, rotation, and scaling transformations are done using matrices. We multiply each vertex in the \doxyref{VAO}{p.}{class_v_a_o} by a matrix to get the result. The matrix is constructed using the position, rotation, and scale fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The shape object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 The transformation matrix. 
+\end{DoxyReturn}
+\index{Shape@{Shape}!GetVAO@{GetVAO}}
+\index{GetVAO@{GetVAO}!Shape@{Shape}}
+\doxysubsubsection{GetVAO()}
+{\footnotesize\ttfamily \label{class_shape_a84ee18f19f27c18f118379038091fb9f} 
+virtual \textbf{ VAO} Shape\+::\+Get\+VAO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the shape\textquotesingle{}s corresponding \doxyref{VAO}{p.}{class_v_a_o} using \doxyref{Vertex\+Data}{p.}{class_vertex_data} methods. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{VAO}{p.}{class_v_a_o} The \doxyref{VAO}{p.}{class_v_a_o} of the shape. 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ Cone} \doxyref{}{p.}{class_cone_a190c3f83c7db96eaba3e727927f63b13}, \textbf{ Cube} \doxyref{}{p.}{class_cube_a001ba46f479b6e86624c5027856e94bc}, \textbf{ Cylinder} \doxyref{}{p.}{class_cylinder_a34b14d77ed76313fc13f4dc01dccfd3e}, and \textbf{ Sphere} \doxyref{}{p.}{class_sphere_aa9ae983aff6930542e18d5d38a1a562b}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+proj/\textbf{ Shape.\+h}\end{DoxyCompactItemize}

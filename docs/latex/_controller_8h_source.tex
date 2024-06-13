@@ -1,0 +1,63 @@
+\doxysection{Controller.\+h}
+\label{_controller_8h_source}\index{cpp\_proj/Controller.h@{cpp\_proj/Controller.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Controller\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{float}\ mouseSpeed\ =\ 30;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{float}\ zoomSpeed\ =\ 3;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{float}\ mouseLastX\ =\ 400;}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{float}\ mouseLastY\ =\ 300;}
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{float}\ mouseXoffset;}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{float}\ mouseYoffset;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ mouseSensitivity\ =\ 0.1f;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ Controller();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ Controller(\textcolor{keyword}{const}\ Controller\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keyword}{static}\ Controller\ \&GetInstance()\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ Controller\ instance;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00043\ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetScaling();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetRotating();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetTranslating();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{static}\ glm::vec3\ GetTransformVector(Camera\ \&camera);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MoveCamera(GLFWwindow\ *window,\ Camera\ \&camera);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SwitchState(GLFWwindow\ *window,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ scancode,\ \textcolor{keywordtype}{int}\ action,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mods);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MouseCallback(GLFWwindow\ *window,\ \textcolor{keywordtype}{double}\ xpos,\ \textcolor{keywordtype}{double}\ ypos);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{bool}\ isScaling\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordtype}{bool}\ isRotating\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{bool}\ isTranslating\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{bool}\ isXaxisEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{bool}\ isYaxisEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{bool}\ isZaxisEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ResetMouse();}
+\DoxyCodeLine{00120\ \};}
+
+\end{DoxyCode}

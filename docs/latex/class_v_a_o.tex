@@ -1,0 +1,89 @@
+\doxysection{VAO Class Reference}
+\label{class_v_a_o}\index{VAO@{VAO}}
+
+
+Vertex Array Object (\doxyref{VAO}{p.}{class_v_a_o}) class.  
+
+
+
+
+{\ttfamily \#include $<$VAO.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_v_a_o_a3b2ec9574d0aa9e86e5288095f58097e} 
+{\bfseries VAO} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \textbf{ Link} (\textbf{ VBO} \&\textbf{ VBO}, \textbf{ EBO} \&\textbf{ EBO})
+\begin{DoxyCompactList}\small\item\em Method to link a \doxyref{VBO}{p.}{class_v_b_o} and \doxyref{EBO}{p.}{class_e_b_o} to the \doxyref{VAO}{p.}{class_v_a_o}. \end{DoxyCompactList}\item 
+void \textbf{ Link} (\textbf{ VBO} \&\textbf{ VBO})
+\begin{DoxyCompactList}\small\item\em Method to link a \doxyref{VBO}{p.}{class_v_b_o} to the \doxyref{VAO}{p.}{class_v_a_o}. \end{DoxyCompactList}\item 
+\label{class_v_a_o_a7e9333d9696005783f8d1074d6b54003} 
+void {\bfseries Bind} ()
+\begin{DoxyCompactList}\small\item\em Method to bind the \doxyref{VAO}{p.}{class_v_a_o}. \end{DoxyCompactList}\item 
+\label{class_v_a_o_a494321f165270d2294b5ece8bf431959} 
+void {\bfseries Unbind} ()
+\begin{DoxyCompactList}\small\item\em Method to unbind the \doxyref{VAO}{p.}{class_v_a_o}. \end{DoxyCompactList}\item 
+\label{class_v_a_o_a94f02b2944ec65654fce692c25d71dd7} 
+void {\bfseries Delete} ()
+\begin{DoxyCompactList}\small\item\em Method to delete the \doxyref{VAO}{p.}{class_v_a_o}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \textbf{ ID}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vertex Array Object (\doxyref{VAO}{p.}{class_v_a_o}) class. 
+
+\doxyref{VAO}{p.}{class_v_a_o} is used by Open\+GL to store Vertex Buffer Objects (\doxyref{VBO}{p.}{class_v_b_o}) and Element Buffer Objects (\doxyref{EBO}{p.}{class_e_b_o}) in one object, making it easier to bind them. 
+
+\doxysubsection{Member Function Documentation}
+\index{VAO@{VAO}!Link@{Link}}
+\index{Link@{Link}!VAO@{VAO}}
+\doxysubsubsection{Link()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_v_a_o_afe845e27a2f2fb4535276b132c920879} 
+void VAO\+::\+Link (\begin{DoxyParamCaption}\item[{\textbf{ VBO} \&}]{VBO}{}\end{DoxyParamCaption})}
+
+
+
+Method to link a \doxyref{VBO}{p.}{class_v_b_o} to the \doxyref{VAO}{p.}{class_v_a_o}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{VBO}{p.}{class_v_b_o}} & Vertex Buffer Object to link. \\
+\hline
+\end{DoxyParams}
+\index{VAO@{VAO}!Link@{Link}}
+\index{Link@{Link}!VAO@{VAO}}
+\doxysubsubsection{Link()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_v_a_o_aba42d5c42649656bfac2e751b54a66c0} 
+void VAO\+::\+Link (\begin{DoxyParamCaption}\item[{\textbf{ VBO} \&}]{VBO}{, }\item[{\textbf{ EBO} \&}]{EBO}{}\end{DoxyParamCaption})}
+
+
+
+Method to link a \doxyref{VBO}{p.}{class_v_b_o} and \doxyref{EBO}{p.}{class_e_b_o} to the \doxyref{VAO}{p.}{class_v_a_o}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{VBO}{p.}{class_v_b_o}} & Vertex Buffer Object to link. \\
+\hline
+{\em \doxyref{EBO}{p.}{class_e_b_o}} & Element Buffer Object to link. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\index{VAO@{VAO}!ID@{ID}}
+\index{ID@{ID}!VAO@{VAO}}
+\doxysubsubsection{ID}
+{\footnotesize\ttfamily \label{class_v_a_o_af44e785c29f3c7b10d9de3ce23b64dc1} 
+GLuint VAO\+::\+ID}
+
+ID of the \doxyref{VAO}{p.}{class_v_a_o}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+proj/\textbf{ VAO.\+h}\end{DoxyCompactItemize}

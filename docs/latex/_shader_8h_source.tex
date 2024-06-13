@@ -1,0 +1,48 @@
+\doxysection{Shader.\+h}
+\label{_shader_8h_source}\index{cpp\_proj/Shader.h@{cpp\_proj/Shader.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cerrno>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }Shader\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ GLuint\ ID;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{int}\ matrixLoc;}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{int}\ colorLoc;}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{int}\ alphaLoc;}
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{int}\ projectionLoc;}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{int}\ lightColorLoc;}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ lightPosLoc;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ Shader();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ Shader(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *vertexFile,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fragmentFile);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ Activate();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ Delete();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ SetMatrix(glm::mat4\ matrix);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ SetColor(glm::vec3\ color);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ SetAlpha(\textcolor{keywordtype}{float}\ alpha);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{void}\ SetProjectionMatrix(glm::mat4\ matrix);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{void}\ SetLightColor(glm::vec3\ lightColor);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{void}\ SetLightPosition(glm::vec3\ lightPos);}
+\DoxyCodeLine{00104\ \};}
+
+\end{DoxyCode}

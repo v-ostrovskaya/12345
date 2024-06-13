@@ -1,0 +1,184 @@
+\doxysection{Shader Class Reference}
+\label{class_shader}\index{Shader@{Shader}}
+
+
+This class manages shaders.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shader_a0d654ebaca4e0555197c0724c6d30610} 
+{\bfseries Shader} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxyref{Shader}{p.}{class_shader}. \end{DoxyCompactList}\item 
+\textbf{ Shader} (const char $\ast$vertex\+File, const char $\ast$fragment\+File)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxyref{Shader}{p.}{class_shader} that loads, compiles, and links vertex and fragment shaders. \end{DoxyCompactList}\item 
+\label{class_shader_a4315a6336472b293392aa50e7a4e65d0} 
+void {\bfseries Activate} ()
+\begin{DoxyCompactList}\small\item\em Activate the shader program. \end{DoxyCompactList}\item 
+\label{class_shader_a5b61f74d76f407882682314c6f998106} 
+void {\bfseries Delete} ()
+\begin{DoxyCompactList}\small\item\em Delete the shader program. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Matrix} (glm\+::mat4 matrix)
+\begin{DoxyCompactList}\small\item\em Write a matrix into the matrix uniform. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Color} (glm\+::vec3 color)
+\begin{DoxyCompactList}\small\item\em Write a color into the color uniform. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Alpha} (float alpha)
+\begin{DoxyCompactList}\small\item\em Write an alpha value into the alpha uniform. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Projection\+Matrix} (glm\+::mat4 matrix)
+\begin{DoxyCompactList}\small\item\em Write a projection matrix into the projection uniform. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Light\+Color} (glm\+::vec3 light\+Color)
+\begin{DoxyCompactList}\small\item\em Write a light color into the light color uniform. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Light\+Position} (glm\+::vec3 light\+Pos)
+\begin{DoxyCompactList}\small\item\em Write a light position into the light position uniform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576} 
+GLuint {\bfseries ID}
+\item 
+\label{class_shader_a540102bf81b195fa34ff2b830df44d1a} 
+int {\bfseries matrix\+Loc}
+\begin{DoxyCompactList}\small\item\em We separate shaders into their own files and compile them during runtime because they are not written in CPP. The communication between our classes and shaders is done via uniforms -\/ values in shader scripts that can be written to from outside the file. To write into the uniform we need its location. It is set into these fields in the constructor. \end{DoxyCompactList}\item 
+\label{class_shader_a016ec2debcce9258513484c8204e2e11} 
+int {\bfseries color\+Loc}
+\item 
+\label{class_shader_aa81b800ccea6febab4ebdf4b60486c6d} 
+int {\bfseries alpha\+Loc}
+\item 
+\label{class_shader_a9afbfc4fa43d37f9b9312f4f66cae14f} 
+int {\bfseries projection\+Loc}
+\item 
+\label{class_shader_ae1ef43ebca3866ae38c5258831112581} 
+int {\bfseries light\+Color\+Loc}
+\item 
+\label{class_shader_a44947df35bbd9bda73f51d307d0a1e40} 
+int {\bfseries light\+Pos\+Loc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class manages shaders. 
+
+Shaders are programs that take vertices as input and eventually determine how pixels are rendered on the screen. We are using a vertex shader to transform \doxyref{VAO}{p.}{class_v_a_o}\textquotesingle{}s vertices using matrices and a fragment shader to change the vertex color. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\doxysubsubsection{Shader()}
+{\footnotesize\ttfamily \label{class_shader_adbb25913a58f46d072ba388940433916} 
+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{vertex\+File}{, }\item[{const char $\ast$}]{fragment\+File}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxyref{Shader}{p.}{class_shader} that loads, compiles, and links vertex and fragment shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+File} & Path to the vertex shader file. \\
+\hline
+{\em fragment\+File} & Path to the fragment shader file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\index{Shader@{Shader}!SetAlpha@{SetAlpha}}
+\index{SetAlpha@{SetAlpha}!Shader@{Shader}}
+\doxysubsubsection{SetAlpha()}
+{\footnotesize\ttfamily \label{class_shader_a4f675cf5b2b209989fef95f82cc8161a} 
+void Shader\+::\+Set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{alpha}{}\end{DoxyParamCaption})}
+
+
+
+Write an alpha value into the alpha uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & The alpha value to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!Shader@{Shader}}
+\doxysubsubsection{SetColor()}
+{\footnotesize\ttfamily \label{class_shader_a97a011a522a55a94fd502b2542ed5197} 
+void Shader\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Write a color into the color uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!SetLightColor@{SetLightColor}}
+\index{SetLightColor@{SetLightColor}!Shader@{Shader}}
+\doxysubsubsection{SetLightColor()}
+{\footnotesize\ttfamily \label{class_shader_a2e5fd23e1cc461c409ad318a33a9fd9e} 
+void Shader\+::\+Set\+Light\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{light\+Color}{}\end{DoxyParamCaption})}
+
+
+
+Write a light color into the light color uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light\+Color} & The light color to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!SetLightPosition@{SetLightPosition}}
+\index{SetLightPosition@{SetLightPosition}!Shader@{Shader}}
+\doxysubsubsection{SetLightPosition()}
+{\footnotesize\ttfamily \label{class_shader_a9e49fc77240f79f2428c9382ca3d2a8a} 
+void Shader\+::\+Set\+Light\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{light\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Write a light position into the light position uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light\+Pos} & The light position to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!SetMatrix@{SetMatrix}}
+\index{SetMatrix@{SetMatrix}!Shader@{Shader}}
+\doxysubsubsection{SetMatrix()}
+{\footnotesize\ttfamily \label{class_shader_ae65820603267156f2f5f8218ca10d483} 
+void Shader\+::\+Set\+Matrix (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{matrix}{}\end{DoxyParamCaption})}
+
+
+
+Write a matrix into the matrix uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The matrix to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!SetProjectionMatrix@{SetProjectionMatrix}}
+\index{SetProjectionMatrix@{SetProjectionMatrix}!Shader@{Shader}}
+\doxysubsubsection{SetProjectionMatrix()}
+{\footnotesize\ttfamily \label{class_shader_ad9b0e64c2e15e5b112a4b32dcaee818e} 
+void Shader\+::\+Set\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{matrix}{}\end{DoxyParamCaption})}
+
+
+
+Write a projection matrix into the projection uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The projection matrix to be set in the uniform. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+proj/\textbf{ Shader.\+h}\end{DoxyCompactItemize}
